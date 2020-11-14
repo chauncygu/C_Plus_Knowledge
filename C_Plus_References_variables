@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+typedef struct
+{
+    int x;
+    int y;
+    /* data */
+}Coor;
+
+int main(void)
+{
+    Coor c1;
+    Coor &c = c1;
+    int a = 10;
+    int &b = a;
+    b = 100;
+    a = 300;
+    c.x = 10;
+    c.y = 20;
+    cout << c1.x << c1.y << endl;
+    cout << c.x <<endl;
+    cout << "This can get real a:" << b << endl;
+
+    cout << "This Point" << endl;
+    int aa = 2;
+    int *p = &aa;
+    int *&q = p;
+
+    *q = 55;
+    cout << aa << endl;
+
+}
